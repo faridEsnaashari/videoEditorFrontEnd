@@ -8,8 +8,6 @@ import pauseIcon from '../assets/img/videoEditor/pauseIcon.svg'
 import startOverIcon from '../assets/img/videoEditor/startOverIcon.png'
 import timeLinePaddleIcon from '../assets/img/videoEditor/timeLinePaddle.svg'
 
-import testVideo from '../videos/2.mp4';
-
 const styles = {
     container: {
         display: "flex",
@@ -269,7 +267,7 @@ function VideoEditor(props) {
                     ORIGINAL VIDEO:
                 </span>
                 <video className={ classes.video } id="originalVideo" autoPlay controls>
-                    <source src={ testVideo }/>
+                    <source src={ props.video }/>
                 </video>
                 <div className={ classes.timeLineContainer }>
                     <div className={ classes.timeLineButtonContainer }>
@@ -293,7 +291,7 @@ function VideoEditor(props) {
                     RESULT VIDEO:
                 </span>
                 <video className={ classes.video } id="resultVideo">
-                    <source src={ testVideo }/>
+                    <source src={ props.video }/>
                 </video>
                 <div className={ classes.resultVideoButtonsContainer }>
                     <div className={ classes.play } onClick={ playClicked }></div>
